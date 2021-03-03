@@ -17,7 +17,7 @@ namespace CalculoPerimetro
             //2 crear una variable de tipo int la cual guardara la suma de las tres variables
             int suma = a + b + c;
 
-            //3 mostrar en pantalla el valor de suma "el valor de suma es"
+            //3 mostrar en pantalla el valor de suma "el perimetro del triangulo es "
             Console.WriteLine("El perimetro del triangulo es " + suma);
             Console.WriteLine("presiona cualquier tecla para continuar");
             Console.ReadKey();
