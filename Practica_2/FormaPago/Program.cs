@@ -10,24 +10,32 @@ namespace FormaPago
     {
         static void Main(string[] args)
         {
-            //pedir precio del producto 
-            Console.WriteLine("escriba precio del producto");
+            //Debera pedir el precio del producto 
+            Console.WriteLine("Escriba el precio del producto");
             double precio = Convert.ToDouble(Console.ReadLine());
-
-            //pedir forma de pago con tarjeta o en efectivo 
-            Console.WriteLine("escriba la forma de pago tarjeta o efectivo");
-            string formapago = (Console.ReadLine()).ToLower();
-
-            //en caso de ser tarjeta pedir el numero de tarjeta 
-            if(formapago.Equals("tarjeta"))
+            //Debera pedir la forma de pago 
+            Console.WriteLine("Escriba la forma de pago: tarjeta o efectivo");
+            String formaPago = (Console.ReadLine()).ToLower();
+            //Si es Tarjeta debera pedir el numero de tarjeta
+            if (formaPago.Equals("tarjeta"))
             {
-                Console.WriteLine("introduce el numero de tarjeta");
+                Console.WriteLine("Introduce el numero de tarjeta");
                 int numero_tarjeta = Convert.ToInt32(Console.ReadLine());
-
+                //Imprimir el producto con precio 
+                Console.WriteLine("El producto con precio " + precio + " se ha pagado con el numero de tarjeta " + numero_tarjeta);
             }
-            //imprimir mensaje el producto con precio
-            Console.WriteLine("el producto con precio"+ precio + "se ha pagado con el; numero de tarjeta"+  )
-            //imprimir mensaje 
+            else if (formaPago.Equals("efectivo"))
+            {
+                // pago es en efectivo imprimira El producto con precio <precio> se ha pagado”
+                Console.WriteLine("El producto con precio" + precio + "se ha pagado");
+            }
+            else
+            {
+                // imprimir "No es un metodo correcto de pago"
+                Console.WriteLine("No es un metodo de pago correcto");
+            }
+            Console.WriteLine("Presiona cualquier tecla para continuar");
+            Console.ReadKey();
         }
     }
 }
